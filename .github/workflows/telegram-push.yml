@@ -1,4 +1,4 @@
-- name: Telegram Notify
+  name: Telegram Notify
   on: [ push ]
   jobs:
 
