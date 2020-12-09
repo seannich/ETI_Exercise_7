@@ -10,6 +10,6 @@ jobs:
     - name: send custom message with args
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
-        token: https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY/getMe
+        to: https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/
+        token: https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getMe
         args: The ${{ github.event_name }} event triggered first step.
