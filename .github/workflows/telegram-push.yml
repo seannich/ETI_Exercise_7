@@ -2,16 +2,16 @@ name: Telegram Notify
 on: [ push ]
 jobs:
 
-build:
-  name: Build
-  runs-on: ubuntu-latest
-  steps:
-  - name: Checkout
-  - uses: actions/checkout@master
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+    - uses: actions/checkout@master
 
-  - name: Custom Message
-  - uses: appleboy/telegram-action@0.0.3
-    with:
-      to: "https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY/sendMessage@seannich"
-      token: "https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY"
-      args: The ${{ github.event_name }} event triggered first step.
+    - name: Custom Message
+    - uses: appleboy/telegram-action@0.0.3
+      with:
+        to: "https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY/sendMessage@seannich"
+        token: "https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY"
+        args: The ${{ github.event_name }} event triggered first step.
