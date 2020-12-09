@@ -15,21 +15,3 @@
         to: "https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY/sendMessage@seannich"
         token: "https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY"
         args: The ${{ github.event_name }} event triggered first step.
-
-  
-
-name: telegram message
-on: [push]
-jobs:
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: send custom message with args
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{ secrets.TELEGRAM_TO }}
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: The ${{ github.event_name }} event triggered first step.
