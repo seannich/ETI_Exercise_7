@@ -12,8 +12,8 @@
     - name: Custom Message
     - uses: appleboy/telegram-action@0.0.3
       with:
-        to: ${{ 157494816 }}
-        token: $ {{ https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY }}
+        to: "https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY/sendMessage@seannich"
+        token: "https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY"
         args: The ${{ github.event_name }} event triggered first step.
 
   
