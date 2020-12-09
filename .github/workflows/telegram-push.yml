@@ -1,3 +1,23 @@
+- name: Telegram Notify
+  on: [ push ]
+  jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+    - uses: actions/checkout@master
+
+    - name: Custom Message
+    - uses: appleboy/telegram-action@0.0.3
+      with:
+        to: ${{ 157494816 }}
+        token: $ {{ https://api.telegram.org/bot1430717180:AAGqdjZ_bzaWRUfmwFqlFThTwLyVzI7JyWY }}
+        args: The ${{ github.event_name }} event triggered first step.
+
+  
+
 name: telegram message
 on: [push]
 jobs:
@@ -10,6 +30,6 @@ jobs:
     - name: send custom message with args
       uses: appleboy/telegram-action@master
       with:
-        to: https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/
-        token: https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getMe
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
         args: The ${{ github.event_name }} event triggered first step.
