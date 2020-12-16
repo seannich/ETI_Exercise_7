@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Custom Message
-      uses: appleboy/telegram-action@0.0.3
+      uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.TELESEAN }}
         token: ${{ secrets.TELETOKEN }}
