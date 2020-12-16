@@ -1,0 +1,18 @@
+name: Telegram Notify
+
+on: 
+  pull_request:
+    branches: [ main ]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Custom Message
+      uses: appleboy/telegram-action@0.0.3
+      with:
+        to: ${{ secrets.TELESEAN }}
+        token: ${{ secrets.TELETOKEN }}
+        args: The ${{ github.event_name }} event triggered first step.
