@@ -1,15 +1,15 @@
 name: Telegram Notify
 
-on: [ push ]
-
+on: 
+  pull_request:
+    branches: [ main ]
 jobs:
 
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+    - uses: actions/checkout@master
     - name: Custom Message
       uses: appleboy/telegram-action@0.0.3
       with:
