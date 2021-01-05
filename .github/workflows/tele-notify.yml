@@ -1,6 +1,6 @@
 name: Telegram Notify
 
-on: [push]
+on: [ push ]
   
 jobs:
 
