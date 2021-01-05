@@ -15,4 +15,4 @@ jobs:
       with:
         to: ${{ secrets.TELESEAN }}
         token: ${{ secrets.TELETOKEN }}
-        args: The ${{ github.event_name }} event triggered first step.
+        args: There has been a ${{ github.event_name }} event in ${{ github.ref }} recently from ${{ github.actor }}. \n RUN_ID; ${{ github.run_id}} \n SHA; ${{ github.sha}} \n SERVER_URL; ${{ github.server_url}} \n API_URL; ${{ github.api_url }}
