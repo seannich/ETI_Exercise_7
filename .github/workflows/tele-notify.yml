@@ -14,4 +14,4 @@ jobs:
       with:
         to: ${{ secrets.TELESEAN }}
         token: ${{ secrets.TELETOKEN }}
-        args: github workspace = ${{ github.workspace}} 
+        args: github workflow = ${{ github.workflow}} 
