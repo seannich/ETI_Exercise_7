@@ -10,4 +10,3 @@ jobs:
     - uses: Klemensas/action-autotag@stable
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        package_root: ../../package-lock.json
